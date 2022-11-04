@@ -1,0 +1,94 @@
+graph BT
+
+a[coal]
+b[silicon]
+c[natural gas]
+d[aluminum]
+e[copper]
+f[iron]
+g[wood]
+h[Plastic]
+i[Glass]
+j[Screen]
+k[Battery]
+l[Integrated Circuit]
+m[PC]
+n[Bitcoin]
+o[Dogecoin]
+p[Fashion]
+q[Clothes]
+r[Toys]
+s[Shoes]
+t[Paper]
+
+
+fa[Gas Processing Plant]
+fb[Glass Factory]
+fc[Screen Factory]
+fd[Galvanic Battery Factory]
+fe[Chip Manufacturer]
+ff[Computer Factory]
+fg[Bitcoin Farm]
+fh[Dogecoin Farm]
+fi[Fashion Factory]
+fj[Clothing Factory]
+fk[Paper Mill]
+fl[Toy Factory]
+fm[Shoe Factory]
+
+r-->|x5|fh
+p-->|x5|fh
+n-->|x1|fh
+fh---|x1|o
+
+
+s-->|x5|fi
+q-->|x5|fi
+fi---|x1|p
+
+
+h-->|x2|fm
+fm---|x2|s
+
+h-->|x2|fl
+k-->|x1|fl
+fl---|x1|r
+
+g-->|x2|fk
+fk---|x1|t
+
+h-->|x1|fj
+t-->|x1|fj
+fj---|x3|q
+
+c-->|x1|fa
+fa---|x1|h
+
+b-->|x2|fb
+a-->|x1|fb
+fb---|x1|i
+
+i-->|x1|fc
+h-->|x2|fc
+b-->|x1|fc
+fc---|x1|j
+
+e-->|x6|fe
+b-->|x6|fe
+d-->|x6|fe
+fe---|x1|l
+
+e-->|x2|fd
+b-->|x1|fd
+fd---|x1|k
+
+k-->|x2|ff
+d-->|x2|ff
+j-->|x1|ff
+l-->|x2|ff
+h-->|x2|ff
+ff---|x1|m
+
+m--->|x5|fg
+l--->|x5|fg
+fg---|x1|n
